@@ -1,6 +1,6 @@
 # Happyvalley's personal blog
 
-##About
+## About
 Fork form Gaohaoyang/gaohaoyang.github.io
 
 Just using to be my personal blog
