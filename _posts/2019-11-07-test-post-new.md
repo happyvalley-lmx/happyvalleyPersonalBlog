@@ -1,11 +1,6 @@
 ---
 layout: post
-title:  "测试一下这个博客系统!"
-date:   2019-11-07 23:20:00
-categories: jekyll
-tags: jekyll
-excerpt: 测试一下使用VS2019抄格式写篇新的文章。
-mathjax: true
+title: 测试发送博文
 ---
 
 好像
