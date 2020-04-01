@@ -11,21 +11,19 @@ type: page
 
 ## 关于我
 
-<iframe src="https://githubbadge.appspot.com/gaohaoyang?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
+乐谷，平时会做做视频，一个音游玩家、MC玩家、穿越机玩家，努力学习编程中，有一个通吃软硬件的梦想(?
 
 ## 联系我
 
-* GitHub：[Gaohaoyang](https://github.com/Gaohaoyang)
-* email：gaohaoyang126@126.com
-* [Weibo](http://weibo.com/3115521wh)
-* [知乎](https://www.zhihu.com/people/gaohaoyang)
-* [Facebook](https://www.facebook.com/gaohaoyang.water)
-* [豆瓣](https://www.douban.com/people/42525035/)
-* [豆瓣音乐人-浩阳的小站](https://site.douban.com/haoyangaiyinyue/)
+* GitHub：[happyvalley-lmx](https://github.com/happyvalley-lmx)
+* email：happyvalley-lmx@outlook.com
+* [Weibo](https://weibo.com/happyvalleylmx)
+* [Bilibili](https://space.bilibili.com/8033176)
+* [YouKu](https://i.youku.com/mcoltv)
 
 ## 友情链接
 
-[羡辙杂俎](http://zhangwenli.com/blog) \| [Anotherhome](https://www.anotherhome.net) \| [Reverland](http://reverland.org/) \| [ZhiLi](http://lizhipower.github.io/) \| [Simmer](http://simmer-jun.github.io/) \| [awthink](http://awthink.net/) \| [Aralic](http://aralic.github.io/) \| [zchen9](http://www.chen9.info/) \| [wuhuaji](http://wuhuaji.me/) \| [lisheng](http://www.lishengcn.cn/) \| [薛彬XueBin](http://axuebin.com/blog/) \| [TBOOX](http://www.tboox.org/cn/) \|  [Ling](http://linglinyp.com/)
+[某魏's blog](https://tqlwsl.moe/) \| [一隻野生琪露諾](https://blog.cirnobaka.moe/) \| [BlueDream](https://www.bdcraft.cn/)
 
 ## Comments
 
