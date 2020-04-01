@@ -16,7 +16,7 @@ type: page
 ## 联系我
 
 * GitHub：[happyvalley-lmx](https://github.com/happyvalley-lmx)
-* email：happyvalley-lmx@outlook.com
+* Email：happyvalley-lmx@outlook.com
 * [Weibo](https://weibo.com/happyvalleylmx)
 * [Bilibili](https://space.bilibili.com/8033176)
 * [YouKu](https://i.youku.com/mcoltv)
