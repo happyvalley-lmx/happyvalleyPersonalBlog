@@ -2,6 +2,9 @@
 layout: post
 title: 解决OBS无法使用窗口捕获以及显示器捕获的问题
 date:   2019-12-25 12:11:32
+categories: video
+tags: obs stream video
+excerpt: 最近新电脑的OBS出现了无法正常捕捉的问题，尝试摸索了一个解决方案。
 ---
 
 # 解决OBS无法使用窗口捕获以及显示器捕获的问题
