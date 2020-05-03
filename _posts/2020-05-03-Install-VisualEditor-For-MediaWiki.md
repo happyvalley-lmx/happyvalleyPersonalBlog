@@ -4,14 +4,14 @@ title: 给MediaWiki安装可视化编辑VisualEditor
 date:   2020-05-03 05:00:00
 categories: web
 tags: MediaWiki PHP web
-excerpt: arcaeacnwiki搬家结束了，终于从512M的小水管换到了2M的小水管，于是在热心~~卡车~~WIKI群友的催促下安装了 VisualEditor 扩展用于可视化编辑操作。
+excerpt: arcaeacnwiki搬家结束了，终于从512M运存的小水管换到了2048M运存的小水管，于是在热心WIKI群友的催促下安装了 VisualEditor 扩展用于可视化编辑操作。
 ---
 
 # 给MediaWiki安装可视化编辑VisualEditor
 
 ## 前言
 
-arcaeacnwiki搬家结束了，终于从512M的小水管换到了2M的小水管，于是在热心~~卡车~~WIKI群友的催促下安装了 VisualEditor 扩展用于可视化编辑操作。
+arcaeacnwiki搬家结束了，终于从512M运存的小水管换到了2048M运存的小水管，于是在热心~~卡车~~WIKI群友的催促下安装了 VisualEditor 扩展用于可视化编辑操作。
 
 ## 流程
 
