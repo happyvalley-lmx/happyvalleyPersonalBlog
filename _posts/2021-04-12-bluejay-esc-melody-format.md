@@ -69,7 +69,7 @@ AxiumCrisis:b=170,o=4,d=32:8g#4,8f5,8g5,4d6,8g6,8f6,8c6,8f4,8d5,8g5,4c6,8d6,4g5,
 
 #### Viyella's Tears
 
-音乐游戏《Ogenki》原创曲目。
+音乐游戏《Ongeki》原创曲目。
 
 ```
 Viyella'sTears:b=109,o=4,d=1:2g,4c,4g,4f,8f,16g,16g#,4a#,8c5,8d#5,4d5,8d#5,8a#,4p,8c,8d#,4d,8d#,4a#,8c5,8a#,8g#
