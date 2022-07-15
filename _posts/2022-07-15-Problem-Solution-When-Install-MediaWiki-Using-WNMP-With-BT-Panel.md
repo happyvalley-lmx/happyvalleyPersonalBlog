@@ -72,6 +72,7 @@ curl 关闭证书校验：
     location @rewrite {
         rewrite ^/(.*)$ /index.php?title=$1&$args;
     }
+    
 注：宝塔伪静态页实质为站点nginx配置中的REWRITE设置
 
     #REWRITE-START
