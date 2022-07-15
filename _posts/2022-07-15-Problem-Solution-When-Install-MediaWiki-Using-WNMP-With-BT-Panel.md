@@ -7,7 +7,7 @@ tags: MediaWiki nginx PHP
 excerpt: 最近在搞一个新的MediaWiki站点，本文结合了自己在宝塔一键安装WNMP环境中配置MediaWiki遇到的问题以及对应解决方案。
 
 ---
-# WNMP环境下MediaWiki配合宝塔面板配置过程中的常见问题及解决方案  
+## 前言  
 最近在搞一个新的 MediaWiki 站点，本文结合了自己在宝塔一键安装WNMP环境中配置 MediaWiki 遇到的问题以及对应解决方案。
 
 ## 可视化编辑器出现 curl error 60 错误  
