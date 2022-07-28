@@ -9,6 +9,10 @@ excerpt: arcaeacnwiki搬家结束了，终于从512M运存的小水管换到了2
 
 # 给MediaWiki安装可视化编辑VisualEditor
 
+## 2022 补充
+
+可视化编辑器已经内置于 MediaWiki 1.35+ 版本，不需要再进行复杂的配置即可使用可视化编辑器。安装过程可能出现的问题具体可见[此博文](https://blog.happyvalley.video/2022/07/15/Problem-Solution-When-Install-MediaWiki-Using-WNMP-With-BT-Panel/)
+
 ## 前言
 
 arcaeacnwiki搬家结束了，终于从512M运存的小水管换到了2048M运存的小水管，于是在热心~~卡车~~WIKI群友的催促下安装了 VisualEditor 扩展用于可视化编辑操作。
