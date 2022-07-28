@@ -3,7 +3,7 @@ layout: post
 title: 一种导出QQ群成员列表的方案
 date:   2022-07-28 09:50:00 +0800
 categories: web
-tags: json
+tags: json NodeJS
 excerpt: 导出QQ群成员列表，避免有可能的炸群后找不回联系方式
 
 ---
