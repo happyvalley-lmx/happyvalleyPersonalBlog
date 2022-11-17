@@ -29,3 +29,10 @@ excerpt: 导出QQ群成员列表，避免有可能的炸群后找不回联系方
 
 ## 结语
 希望tx少炸点群...
+
+## 20221117补充: 另一种导出方案  
+## 原理  
+通过 go-cqhttp 的API来快速导出群成员列表  
+## 方法  
+使用[获取群成员列表](https://docs.go-cqhttp.org/api/#%E8%8E%B7%E5%8F%96%E7%BE%A4%E6%88%90%E5%91%98%E5%88%97%E8%A1%A8) 的 API 来直接获取包含全体群成员信息的 JSON 数据返回  
+架设 go-cqhttp 并使用HTTP GET方法，随后直接访问 http://127.0.0.1:5700/get_group_member_list?group_id=群号 便可获取。
