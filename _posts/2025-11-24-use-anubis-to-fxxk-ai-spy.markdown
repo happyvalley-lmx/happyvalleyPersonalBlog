@@ -46,10 +46,11 @@ curl http://localhost:9090/metrics
 ```  
 ## 配置 Nginx 反向代理
 还记得前文所述 Anubis 安装在反向代理与后端服务之间吗？它看起来应该是像这样的：  
-```mermaid
+<div class="mermaid">
 graph LR;
   A[Nginx-80端口] --> B[Anubis-8923端口] --> C[后端服务-3000端口]
-```  
+</div>
+
 Anubis在工作的时候，流量应该从 Anubis 绕行后，再传到后端。Anubis 会过滤掉“恶意”的流量，然后将“正常”的流量转发到后端服务。所以，我们应该编辑原有的 Nginx 配置文件，将 Anubis 添加到 Nginx 的反向代理中。我原来的配置文件如下，是一个典型的基于 MediaWiki 的 Nginx 配置文件，MediaWiki直接监听在80端口：
 ```nginx
 server {
