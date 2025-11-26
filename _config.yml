@@ -10,6 +10,7 @@ title: happyvalley's blog'
 brief-intro: A MUGer and Droner
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://happyvalley.video" # the base hostname & protocol for your site
+icp: 桂ICP备20001846号-2
 
 permalink: /:year/:month/:day/:title/
 
@@ -23,7 +24,7 @@ zhihu_username: happyvalley_lmx
 linkedIn_username: 
 dribbble_username:
 
-description_footer: 记录自己学习中的成长之路！
+description_footer: 分享技术，记录自己学习的成长之路！
 
 # comments
 # two ways to comment, only choose one, and use your own short name
