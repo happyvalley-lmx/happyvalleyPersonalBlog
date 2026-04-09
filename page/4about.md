@@ -23,7 +23,7 @@ type: page
 
 ## 友情链接
 
-[某魏's blog](https://tqlwsl.moe/) \| [一隻野生琪露諾](https://blog.cirnobaka.moe/) \| [BlueDream](https://www.bdcraft.cn/)
+[某魏's blog](https://tqlwsl.moe/) \| [一隻野生琪露諾](https://blog.cirnobaka.moe/) \| [BlueDream](https://www.bdcraft.cn/) \| [WindSpirit](https://leviatan.cn/) \| [Carm's Home](https://www.carm.cc/)]
 
 ## Comments
 
