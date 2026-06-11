@@ -1,0 +1,26 @@
+/**
+ * Web fonts.
+ * Loaded via fonts.bunny.net <link> in head.html (privacy-respecting drop-in for
+ * Google Fonts — no tracking, no cookies). This partial only defines `font-display`
+ * fallbacks so unstyled text shows immediately in the system fallback stack.
+ */
+
+// Fallback metric overrides so the system font on first paint occupies a similar
+// box to Inter / Newsreader — reduces layout shift when the webfont arrives.
+@font-face {
+    font-family: 'Inter-fallback';
+    src: local('Arial');
+    size-adjust: 107%;
+    ascent-override: 90%;
+    descent-override: 22%;
+    line-gap-override: 0%;
+}
+
+@font-face {
+    font-family: 'Newsreader-fallback';
+    src: local('Georgia');
+    size-adjust: 100%;
+    ascent-override: 92%;
+    descent-override: 24%;
+    line-gap-override: 0%;
+}

@@ -1,119 +1,157 @@
-body,
-html,
-div,
-header,
-footer,
-nav,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    padding: 0;
-    margin: 0;
+/**
+ * Modern reset + base typography.
+ */
+
+*, *::before, *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 400;
-}
+
 html {
-    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
+
 body {
-    font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft YaHei',sans-serif;
-    color: #333;
-    background-image: url(https://gw.alicdn.com/tfs/TB1xzbUumBYBeNjy0FeXXbnmFXa-125-121.png);
-    position: relative;
-    min-height: 100%;
-    padding-bottom: 190px;
+    font-family: 'Newsreader-fallback', var(--font-body);
+    font-size: var(--fs-base);
+    line-height: 1.65;
+    color: var(--text);
+    background-color: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+// When webfont finishes loading, swap to the real face
+.fonts-loaded body {
+    font-family: 'Newsreader', var(--font-body);
+}
+
 a {
+    color: var(--accent);
     text-decoration: none;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color 0.15s var(--ease);
+
+    &:hover {
+        color: var(--accent-hover);
+        text-decoration: underline;
+    }
 }
+
 button {
     border: none;
     outline: none;
-}
-hr {
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 20px 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
 }
 
-///////////
-h1 {
-    font-size: 30px;
+img, svg, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
-h2 {
-    font-size: 26px;
-    border-bottom: 1px solid #eee;
-    margin: 50px 0 25px;
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border);
+    margin: 32px 0;
 }
-h3 {
-    font-size: 23px;
-    margin: 50px 0 20px;
+
+// Headings — UI sans, balanced
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter-fallback', var(--font-ui);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--text);
+    letter-spacing: -0.01em;
+    text-wrap: balance;
 }
-h4 {
-    font-size: 19px;
-    margin: 30px 0 10px;
+
+.fonts-loaded h1,
+.fonts-loaded h2,
+.fonts-loaded h3,
+.fonts-loaded h4,
+.fonts-loaded h5,
+.fonts-loaded h6 {
+    font-family: 'Inter', var(--font-ui);
 }
-h5 {
-    font-size: 17px;
-    margin: 20px 0 10px;
+
+h1 { font-size: var(--fs-3xl); margin: 0 0 16px; letter-spacing: -0.02em; }
+h2 { font-size: var(--fs-2xl); margin: 48px 0 16px; }
+h3 { font-size: var(--fs-xl);  margin: 36px 0 14px; }
+h4 { font-size: var(--fs-lg);  margin: 28px 0 12px; }
+h5 { font-size: var(--fs-base); margin: 22px 0 10px; }
+h6 { font-size: var(--fs-sm);  margin: 18px 0 8px; color: var(--text-muted); }
+
+p {
+    margin: 0 0 18px;
+    text-wrap: pretty;
 }
-h6 {
-    font-size: 16px;
-    margin: 10px 0 5px;
+
+ul, ol {
+    margin: 0 0 18px;
+    padding-left: 1.5em;
+
+    li {
+        margin: 4px 0;
+    }
 }
+
 blockquote {
-    color: #444;
-    border-left: 5px solid #D6DBDF;
-    padding-left: 15px;
-    background: rgba(112,138,153,.1);
-    padding: 10px 20px;
-    margin: 0 0 20px;
-    p:last-of-type{
+    margin: 24px 0;
+    padding: 4px 0 4px 20px;
+    border-left: 3px solid var(--accent);
+    background: transparent;
+    color: var(--text-muted);
+    font-style: italic;
+
+    p:last-child {
         margin: 0;
     }
 }
+
+// Tables — quiet, no zebra
 table {
-    border-top: 2px solid #777;
-    border-bottom: 2px solid #777;
-    margin: 8px 0;
+    width: 100%;
+    margin: 24px 0;
     border-collapse: collapse;
+    font-size: var(--fs-sm);
+
     thead {
-        border-bottom: 1px solid #777;
-        background-color: #aaa;
-        color: #fff;
+        background: transparent;
+        color: var(--text);
+        border-bottom: 2px solid var(--border-strong);
     }
-    th {
-        padding: 2px 10px;
+
+    th, td {
+        padding: 8px 12px;
         text-align: left;
+        border-bottom: 1px solid var(--border);
     }
-    tbody {
-        tr {
-            &:nth-of-type(2n+1) {
-                background-color: #f8f8fd;
-            }
-            &:nth-of-type(2n) {
-                background-color: #e5eaed;
-            }
-        }
-    }
-    td {
-        padding: 2px 10px;
+
+    tbody tr:hover {
+        background: var(--surface-2);
     }
 }
-p {
-    margin: 0 0 14px;
-}
+
 img {
-    max-width: 100%;
+    border-radius: var(--radius);
+}
+
+// Utility
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }

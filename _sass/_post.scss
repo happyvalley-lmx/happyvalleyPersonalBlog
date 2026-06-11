@@ -1,82 +1,185 @@
+/**
+ * Post pages: long-form article with sticky TOC rail.
+ * Markup unchanged — `.page[post]` wrapper from _layouts/post.html.
+ */
+
 #markdown-toc {
-    display: none;
+    display: none;  // We render TOC in the right rail instead
 }
+
 .page[post] {
-    .label {
-        margin-top: 16px;
-        overflow: hidden;
-        .label-card {
-            float: left;
-            margin-right: 15px;
-            .point {
-                padding: 0 10px;
-                color: #9d9d9d;
-            }
-            i {
-                padding-right: 5px;
-                color: #6b6a6a;
-            }
-        }
-    }
-    a {
-        color: #4d6dad;
-        transition: 0.5s ease;
-        &:hover {
-            color: #223253;
-            background-color: #f4efeb;
-        }
-    }
     .left {
-        ul {
-            >h2 {
-                color: #333;
-            }
-            li {
-                color: #333;
+        max-width: var(--content-w);
+        margin-right: auto;  // article column doesn't need to fill the grid cell
+
+        > h1 {
+            font-size: var(--fs-4xl);
+            line-height: 1.15;
+            letter-spacing: -0.025em;
+            margin-bottom: 16px;
+        }
+
+        .label {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px 16px;
+            margin: 16px 0 8px;
+            font-family: 'Inter-fallback', var(--font-ui);
+            font-size: var(--fs-xs);
+            color: var(--text-muted);
+            overflow: visible;
+
+            .label-card {
+                float: none;
                 margin: 0;
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+
+                &:empty { display: none; }
+
+                .point {
+                    padding: 0 6px;
+                    color: var(--text-subtle);
+                }
+
+                i {
+                    color: var(--text-subtle);
+                    padding-right: 0;
+                    font-size: 12px;
+                }
+
+                .categories,
+                .pageTag {
+                    padding: 0;
+                    display: inline-flex;
+                    flex-wrap: wrap;
+                    gap: 6px;
+
+                    a {
+                        background: var(--surface-2);
+                        color: var(--text-muted);
+                        padding: 1px 8px;
+                        border-radius: 999px;
+                        font-size: 11px;
+                        font-weight: 500;
+                        line-height: 1.6;
+                        border: none;
+
+                        &:hover {
+                            background: var(--accent-soft);
+                            color: var(--accent);
+                            text-decoration: none;
+                        }
+                    }
+                }
             }
         }
-        // .post-recent {
-        //     width: 100%;
-        //     overflow: hidden;
-        //     padding: 4px;
-        //     .pre{
-        //         width: 49%;
-        //         float: left;
-        //     }
-        //     .nex{
-        //         width: 49%;
-        //         float: right;
-        //         text-align: right;
-        //     }
-        //     p {
-        //         min-height: 70px;
-        //         box-sizing: border-box;
-        //         padding: 10px;
-        //         background-color: #fff;
-        //         box-shadow: 0 0 4px 0px rgba(0,0,0,0.15);
-        //     }
-        // }
+
+        > hr {
+            margin: 24px 0 40px;
+        }
+
+        article {
+            font-family: 'Newsreader-fallback', var(--font-body);
+
+            // Headings inside article get extra breathing room
+            h2 {
+                margin-top: 56px;
+                padding-top: 8px;
+                border: none;
+            }
+
+            h3 { margin-top: 40px; }
+
+            p, li {
+                color: var(--text);
+            }
+
+            ul, ol {
+                margin: 0 0 20px;
+                padding-left: 1.5em;
+
+                li {
+                    margin: 6px 0;
+                    line-height: 1.7;
+                }
+            }
+
+            img {
+                margin: 24px auto;
+                border-radius: var(--radius);
+                box-shadow: var(--shadow-sm);
+            }
+
+            a {
+                color: var(--accent);
+                text-decoration: underline;
+                text-decoration-color: var(--accent-soft);
+                text-decoration-thickness: 1.5px;
+                text-underline-offset: 3px;
+
+                &:hover {
+                    color: var(--accent-hover);
+                    background: var(--accent-soft);
+                    text-decoration-color: var(--accent);
+                }
+            }
+        }
+
+        .fonts-loaded & article {
+            font-family: 'Newsreader', var(--font-body);
+        }
+
+        ul {
+            li {
+                color: var(--text);
+                margin: 6px 0;
+            }
+        }
+
+        // Similar Posts + comments section
+        > h2 {
+            font-family: 'Inter-fallback', var(--font-ui);
+            font-size: var(--fs-xl);
+            font-weight: 600;
+            margin-top: 56px;
+            border: none;
+        }
+
+        .relatedPost a {
+            color: var(--text-muted);
+
+            &:hover {
+                color: var(--accent);
+            }
+        }
+    }
+
+    .right {
+        .side.content {
+            > div:first-child {
+                content: "On this page";
+            }
+        }
     }
 }
-@media screen and (max-width: 770px) {
+
+@media (max-width: 770px) {
     .page[post] {
         .left {
-            font-size: 15px;
-            h2 {
-                font-size: 24px;
+            font-size: 1rem;
+
+            > h1 {
+                font-size: var(--fs-2xl);
+                line-height: 1.2;
             }
-            h3 {
-                font-size: 20px;
-            }
-            h4 {
-                font-size: 18px;
-            }
-            h5 {
-                font-size: 16px;
-            }
-            h6 {
-                font-size: 15px;
+
+            article {
+                h2 { font-size: var(--fs-xl); margin-top: 40px; }
+                h3 { font-size: var(--fs-lg); }
+                h4 { font-size: var(--fs-base); }
             }
         }
     }

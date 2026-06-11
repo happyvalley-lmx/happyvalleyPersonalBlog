@@ -1,38 +1,56 @@
 <footer class="site-footer">
-
-
     <div class="wrapper">
 
-        <p class="description">
-            {% if site.description_footer %} {{site.description_footer}} {% endif %}
-        </p>
+        {% if site.description_footer %}
+        <p class="description">{{site.description_footer}}</p>
+        {% endif %}
+
         <p class="contact">
-            Contact me at: {% if site.github_username %}
-            <a href="https://github.com/{{site.github_username}}" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a> {% endif %} {% if site.email %}
-            <a href="mailto:{{site.email}}" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> {% endif %} {% if site.weibo_username %}
-            <a href="http://weibo.com/{{site.weibo_username}}" title="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a> {% endif %} {% if site.zhihu_username %}
-            <a href="https://www.zhihu.com/people/{{site.zhihu_username}}" title="Zhihu"><i class="iconfont icon-daoruzhihu"></i></a> {% endif %} {% if site.twitter_username %}
-            <a href="https://twitter.com/{{site.twitter_username}}" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> {% endif %} {% if site.facebook_username %}
-            <a href="https://www.facebook.com/{{site.facebook_username}}" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> {% endif %}  {% if site.linkedIn_username %}
-            <a href="https://www.linkedin.com/in/{{site.linkedIn_username}}" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a> {% endif %} {% if site.dribbble_username %}
-            <a href=" https://dribbble.com/{{site.dribbble_username}}" title="Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a> {% endif %}
+            {% if site.github_username %}
+            <a href="https://github.com/{{site.github_username}}" title="GitHub" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.email %}
+            <a href="mailto:{{site.email}}" title="email" aria-label="Email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.weibo_username %}
+            <a href="http://weibo.com/{{site.weibo_username}}" title="Weibo" aria-label="Weibo"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.zhihu_username %}
+            <a href="https://www.zhihu.com/people/{{site.zhihu_username}}" title="Zhihu" aria-label="Zhihu">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                    <path d="M5.721 0C2.251 0 0 2.25 0 5.719V18.28C0 21.751 2.252 24 5.721 24h12.56C21.751 24 24 21.75 24 18.281V5.72C24 2.249 21.75 0 18.281 0H5.72zm1.964 4.078c-.271.73-.5 1.434-.832 2.94H10.5l-.041 1.219H8.62c-.05.918-.06 1.052-.144 2.21h2.026v1.22H8.476c-.157 1.09-.397 2.21-.852 3.328a17.523 17.523 0 0 1 2.587 3.367l-.984.945a23.198 23.198 0 0 0-2.205-3.011c-.795 1.611-1.766 2.81-3.116 3.93-.21-.302-.726-.752-1.075-.978 1.612-1.183 2.652-2.486 3.435-4.391-.585-.654-1.32-1.401-2.367-2.293l.83-.873c.21.149 1.193.97 2.06 1.875.273-.91.499-1.937.638-3.099h-3.18V9.221c.038-.13.075-.144.075-.273h2.18c.07-1.054.067-1.293.119-2.21h-1.21c-.245.974-.452 1.55-.806 2.336-.299-.205-.94-.475-1.286-.598.793-1.526 1.184-3.32 1.422-4.764zm6.972 1.375h6.486v11.342h-2.668l-2.213 1.371-.385-1.37h-1.22zm1.273 1.219v8.93h.514l.418.097 1.851-1.117h1.155V6.672h-3.938z"/>
+                </svg>
+            </a>
+            {% endif %}
+            {% if site.twitter_username %}
+            <a href="https://twitter.com/{{site.twitter_username}}" title="Twitter" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.facebook_username %}
+            <a href="https://www.facebook.com/{{site.facebook_username}}" title="Facebook" aria-label="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.linkedIn_username %}
+            <a href="https://www.linkedin.com/in/{{site.linkedIn_username}}" title="LinkedIn" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            {% endif %}
+            {% if site.dribbble_username %}
+            <a href="https://dribbble.com/{{site.dribbble_username}}" title="Dribbble" aria-label="Dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+            {% endif %}
         </p>
+
         <p>
-            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+            访问量 <span id="busuanzi_value_site_pv"></span> · 访客 <span id="busuanzi_value_site_uv"></span> · 本文阅读 <span id="busuanzi_value_page_pv"></span>
         </p>
+
         <p class="power">
-            <span>
-                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
-            </span>
-            <span>
-                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
-            </span>
+            <span>Powered by <a href="https://jekyllrb.com/">Jekyll</a></span>
+            <span>·</span>
+            <span>Theme based on <a href="https://github.com/Gaohaoyang">HyG</a></span>
         </p>
+
+        {% if site.icp %}
         <p class="power">
-            <span>
-                网站备案号：<a href="https://beian.miit.gov.cn/">{{site.icp}}</a>
-            </span>
+            <span>备案号：<a href="https://beian.miit.gov.cn/">{{site.icp}}</a></span>
         </p>
+        {% endif %}
     </div>
 </footer>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

@@ -4,9 +4,8 @@ layout: default
 
 <div class="page clearfix" index>
     <div class="left">
-        <h1>Welcome to happyvalley's Blog!</h1>
-        <small>记录自己学习中的成长之路</small>
-        <hr>
+        <h1>{{ site.title }}</h1>
+        <small>{{ site.brief-intro }} — 记录自己学习中的成长之路</small>
         <ul>
             {% for post in paginator.posts %}
               <li>

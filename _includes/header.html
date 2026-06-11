@@ -2,7 +2,6 @@
     <div class="wrapper">
         <a href="{{ site.baseurl }}/" class="brand">{{ site.title }}</a>
         <small>{{site.brief-intro}}</small>
-        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
         <nav id="headerNav">
             <ul>
                 <li>
@@ -30,5 +29,9 @@
                 {% endfor %}
             </ul>
         </nav>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+        </button>
+        <button id="headerMenu" class="menu" aria-label="Open menu"><i class="fa fa-bars"></i></button>
     </div>
 </header>
