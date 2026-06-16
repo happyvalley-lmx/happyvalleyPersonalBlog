@@ -9,8 +9,11 @@
 
 .page[post] {
     .left {
+        width: 100%;
         max-width: var(--content-w);
+        min-width: 0;
         margin-right: auto;  // article column doesn't need to fill the grid cell
+        overflow-x: hidden;
 
         > h1 {
             font-size: var(--fs-4xl);
@@ -82,12 +85,18 @@
         }
 
         article {
+            max-width: 100%;
+            min-width: 0;
             font-family: 'Newsreader-fallback', var(--font-body);
             // Stray long URLs / un-spaced CJK+ASCII strings should wrap rather
             // than push the article column past its container.
             overflow-wrap: anywhere;
             word-wrap: break-word;
             word-break: normal;
+
+            > * {
+                max-width: 100%;
+            }
 
             // Headings inside article get extra breathing room
             h2 {
@@ -98,9 +107,10 @@
 
             h3 { margin-top: 40px; }
 
-            p, li {
+            p, li, blockquote, dd, figcaption {
                 color: var(--text);
                 overflow-wrap: anywhere;
+                word-break: break-word;
             }
 
             ul, ol {
@@ -127,10 +137,22 @@
                 border-radius: var(--radius);
             }
 
+            .highlight,
+            pre {
+                max-width: 100%;
+                min-width: 0;
+            }
+
             // Mermaid renders an inline SVG; it defaults to its intrinsic
             // width and overflows on narrow viewports.
-            .mermaid, .mermaid svg {
+            .mermaid {
                 max-width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .mermaid svg {
+                max-width: none;
                 height: auto;
             }
 
