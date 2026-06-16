@@ -18,6 +18,12 @@
         min-width: 0;
         font-size: var(--fs-base);
         line-height: 1.7;
+        // Grid items default to `min-width: auto`, which lets long inline
+        // content (URLs, mermaid SVGs, pre blocks) push the cell wider than
+        // the column. Belt-and-braces with overflow-wrap so plain prose still
+        // breaks if it has to.
+        overflow-wrap: break-word;
+        word-wrap: break-word;
 
         > h1 {
             margin: 0 0 8px;

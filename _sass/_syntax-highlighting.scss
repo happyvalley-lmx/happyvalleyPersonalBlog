@@ -11,6 +11,10 @@ code {
     color: var(--code-text);
     background: var(--code-bg);
     border: 1px solid var(--border);
+    // Inline code that wraps a long URL or path used to push the column —
+    // allow it to break on character boundaries when needed.
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 pre {
@@ -19,9 +23,13 @@ pre {
     background: #1e1e26;
     border-radius: var(--radius);
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     line-height: 1.55;
     font-size: var(--fs-sm);
     border: 1px solid transparent;
+    // The `<pre>` is the scroll container — its inner code block keeps its
+    // own whitespace and shouldn't try to wrap.
+    max-width: 100%;
 
     > code {
         margin: 0;
@@ -30,6 +38,10 @@ pre {
         color: #e8e6e0;
         border: none;
         background: transparent;
+        // Inside <pre>, restore default monospace behaviour.
+        word-break: normal;
+        overflow-wrap: normal;
+        white-space: pre;
     }
 }
 
@@ -94,5 +106,12 @@ pre {
         padding-right: 12px;
         border-right: 1px solid #2a2a35;
         user-select: none;
+    }
+}
+
+@media (max-width: 770px) {
+    pre, .highlight pre {
+        padding: 12px 14px;
+        font-size: 0.8125rem;
     }
 }

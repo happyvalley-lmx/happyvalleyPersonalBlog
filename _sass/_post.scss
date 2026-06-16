@@ -83,6 +83,10 @@
 
         article {
             font-family: 'Newsreader-fallback', var(--font-body);
+            // Stray long URLs / un-spaced CJK+ASCII strings should wrap rather
+            // than push the article column past its container.
+            overflow-wrap: break-word;
+            word-wrap: break-word;
 
             // Headings inside article get extra breathing room
             h2 {
@@ -95,6 +99,7 @@
 
             p, li {
                 color: var(--text);
+                overflow-wrap: break-word;
             }
 
             ul, ol {
@@ -113,12 +118,30 @@
                 box-shadow: var(--shadow-sm);
             }
 
+            // Embedded media never escapes the column.
+            iframe, video, embed, object {
+                display: block;
+                max-width: 100%;
+                margin: 24px auto;
+                border-radius: var(--radius);
+            }
+
+            // Mermaid renders an inline SVG; it defaults to its intrinsic
+            // width and overflows on narrow viewports.
+            .mermaid, .mermaid svg {
+                max-width: 100%;
+                height: auto;
+            }
+
             a {
                 color: var(--accent);
                 text-decoration: underline;
                 text-decoration-color: var(--accent-soft);
                 text-decoration-thickness: 1.5px;
                 text-underline-offset: 3px;
+                // Long bare URLs in prose: allow them to break inside the word
+                // instead of pushing the line.
+                word-break: break-word;
 
                 &:hover {
                     color: var(--accent-hover);
@@ -180,6 +203,12 @@
                 h2 { font-size: var(--fs-xl); margin-top: 40px; }
                 h3 { font-size: var(--fs-lg); }
                 h4 { font-size: var(--fs-base); }
+
+                // Pull article images flush with the gutter so they read
+                // larger on phones without busting the viewport.
+                img {
+                    width: 100%;
+                }
             }
         }
     }
