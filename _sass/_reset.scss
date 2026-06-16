@@ -84,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text);
     letter-spacing: -0.01em;
     text-wrap: balance;
+    overflow-wrap: anywhere;
 }
 
 .fonts-loaded h1,
@@ -105,6 +106,7 @@ h6 { font-size: var(--fs-sm);  margin: 18px 0 8px; color: var(--text-muted); }
 p {
     margin: 0 0 18px;
     text-wrap: pretty;
+    overflow-wrap: anywhere;
 }
 
 ul, ol {
@@ -151,6 +153,7 @@ table {
         padding: 8px 12px;
         text-align: left;
         border-bottom: 1px solid var(--border);
+        overflow-wrap: anywhere;
     }
 
     tbody tr:hover {

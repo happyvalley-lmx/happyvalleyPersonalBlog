@@ -30,6 +30,7 @@ pre {
     // The `<pre>` is the scroll container — its inner code block keeps its
     // own whitespace and shouldn't try to wrap.
     max-width: 100%;
+    min-width: 0;
 
     > code {
         margin: 0;

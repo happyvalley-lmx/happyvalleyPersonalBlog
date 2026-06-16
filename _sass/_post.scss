@@ -85,8 +85,9 @@
             font-family: 'Newsreader-fallback', var(--font-body);
             // Stray long URLs / un-spaced CJK+ASCII strings should wrap rather
             // than push the article column past its container.
-            overflow-wrap: break-word;
+            overflow-wrap: anywhere;
             word-wrap: break-word;
+            word-break: normal;
 
             // Headings inside article get extra breathing room
             h2 {
@@ -99,7 +100,7 @@
 
             p, li {
                 color: var(--text);
-                overflow-wrap: break-word;
+                overflow-wrap: anywhere;
             }
 
             ul, ol {
@@ -141,6 +142,7 @@
                 text-underline-offset: 3px;
                 // Long bare URLs in prose: allow them to break inside the word
                 // instead of pushing the line.
+                overflow-wrap: anywhere;
                 word-break: break-word;
 
                 &:hover {
